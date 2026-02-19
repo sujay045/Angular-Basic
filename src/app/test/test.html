@@ -1,0 +1,27 @@
+<p>test works!</p>
+
+<!-- //Interpolation -->
+ <!-- The Interpolation is used to carry value from .ts file to .hmtl file -->
+Hello {{ uname }}
+<br>
+
+<!-- Data Binding -->
+ <!-- The Data Binding is used to carry value from .ts file to .hmtl file -->
+  
+<input type="text" value="{{ uname }}"><br><br>
+
+<input type="text" value="{{ uname }}" disabled><br><br>
+
+<!-- Data Binding fails in case of boolean values -->
+<input type="text" value="{{ uname }}" disabled="{{ flag1 }}"><br><br>
+<input type="text" value="{{ uname }}" disabled="{{ flag2 }}"><br><br>
+
+<!-- Property Binding -->
+ <!-- The Property Binding is used to carry value from .ts file to .hmtl file -->
+<input type="text" value="{{ uname }}" [disabled]="flag1"><br><br>
+<input type="text" value="{{ uname }}" [disabled]="flag2"><br><br>
+
+<!-- Events -->
+ <button (click)="myfun()">Click</button><br><br>
+
+ <input type="text" [(ngModel)]="uname">
